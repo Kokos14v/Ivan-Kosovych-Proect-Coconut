@@ -1,0 +1,7 @@
+{
+  "name": "coconut",
+  "description": "A modern health and nutrition tracker with smart meal analysis, featuring calorie tracking, macro monitoring, and AI-powered meal insights.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}

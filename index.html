@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coconut - Smart Nutrition</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root{
+          --bg-0:#031a1c;
+          --bg-1:#062a2c;
+          --glow:#16f2d0;
+          --text:#eaf7f6;
+          --muted:rgba(234,247,246,.65);
+          --card:rgba(255,255,255,.07);
+          --card-2:rgba(255,255,255,.04);
+          --stroke:rgba(255,255,255,.12);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-0);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .coco-bg{
+          min-height:100vh;
+          background:
+            radial-gradient(900px 500px at 15% 20%, rgba(22,242,208,.18), transparent 60%),
+            radial-gradient(700px 400px at 85% 25%, rgba(22,242,208,.12), transparent 55%),
+            radial-gradient(900px 600px at 50% 110%, rgba(22,242,208,.08), transparent 60%),
+            linear-gradient(180deg, var(--bg-0), var(--bg-1));
+          color:var(--text);
+        }
+
+        .glass{
+          background:linear-gradient(180deg, var(--card), var(--card-2));
+          border:1px solid var(--stroke);
+          box-shadow: 0 14px 34px rgba(0,0,0,.30);
+          backdrop-filter: blur(16px);
+          -webkit-backdrop-filter: blur(16px);
+        }
+
+        .pill{
+          border:1px solid rgba(255,255,255,.10);
+          background:rgba(255,255,255,.04);
+          color:var(--text);
+        }
+
+        .pill-active{
+          border:1px solid rgba(22,242,208,.40);
+          background:rgba(22,242,208,.10);
+          box-shadow: 0 0 20px rgba(22,242,208,0.1) inset;
+        }
+
+        .primary-btn{
+          background: linear-gradient(180deg, #16f2d0 0%, #0db89e 100%);
+          color:#031a1c;
+          box-shadow: 0 8px 24px rgba(22,242,208,0.25);
+          border: none;
+        }
+        .primary-btn:hover{ filter: brightness(1.1); transform: translateY(-1px); }
+        .primary-btn:active{ transform: translateY(1px); filter: brightness(0.95); }
+        .primary-btn:disabled { opacity: 0.5; filter: grayscale(1); pointer-events: none; }
+
+        @keyframes fade-up {
+            from { opacity: 0; transform: translateY(12px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-up {
+            animation: fade-up 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        /* Custom scroll hide */
+        .scroll-hide::-webkit-scrollbar { width: 0px; height: 0px; background: transparent; }
+        .scroll-hide { -ms-overflow-style: none; scrollbar-width: none; }
+
+        ::-webkit-scrollbar { width: 0px; background: transparent; }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "@google/genai": "https://esm.sh/@google/genai@^1.34.0"
+  }
+}
+</script>
+</head>
+<body>
+    <div id="root"></div>
+</body>
+</html>
